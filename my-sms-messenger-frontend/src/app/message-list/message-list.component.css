@@ -1,0 +1,33 @@
+p-scroller {
+    /* height: 1000px; */
+    width: 700px;
+    /* padding: 10px;
+    margin: 10px; */
+    overflow: auto;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.date-pipe {
+    font-size: small;
+}
+
+.char-count {
+    display:flex;
+    justify-content: right;
+    font-size: small;
+    margin-right: 10px;
+}
+
+.message-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+}

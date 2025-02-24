@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="row mb-3">
+                <label for="from">Phone Number</label>
+                <input
+                class="form-control"
+                type="text"
+                id="from"
+                formControlName="from"
+                pInputText
+                required
+                pattern="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$"
+                />  
+            </div>
+            
+            <br>
+            <div class="row mb-3">
+                <label for="body">Message</label><br>
+                <textarea
+                class="form-control"
+                id="body"
+                formControlName="body"
+                pInputTextarea
+                required
+                maxlength="250"
+                ></textarea>
+            </div>
+            
+        </div>
+        <div class="char-count">{{ getCharCount() }}/250</div>
+        <div class="button-group">
+            <a (click)="clearForm()">Clear</a>
+            
+            <p-button
+                class="btn btn-primary" type="submit" label="Submit"
+                [disabled]="!messageForm.dirty" [raised]="true" severity="contrast"
+            />
+
+        </div>
+    </form>
+</div>

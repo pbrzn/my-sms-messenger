@@ -1,0 +1,25 @@
+<div class="container">
+    <p-scroller [items]="messages" scrollHeight="250px" 
+    styleClass="border-1 surface-border">
+        <ng-template pTemplate="item" let-item>
+            <div class="p-grid">
+                <div class="p-col-12">
+                    <div class="p-grid">
+                        <div class="title p-col-12 p-md-3">
+                            <strong>{{ item.from }}</strong>
+                            <div class="date-pipe">
+                                {{ item.created_at | date:'EEEE, dd-MMM-yy HH:mm:ss \'UTC\'' }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-grid">
+                        <div class="p-col-12 p-md-9 message-box">
+                            {{ item.body }}
+                        </div>
+                        <div class="char-count">{{ item.body.length }}/250</div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-scroller>
+</div>

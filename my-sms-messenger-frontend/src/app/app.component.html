@@ -1,0 +1,51 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<main class="main">
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>MY SMS MESSENGER</h1>
+        </div>
+      </div>
+      <div class="row">
+        <p-card header="New Message" [style]="{ height: '500px' }" styleClass="mb-7">
+          <ng-template pTemplate="content">
+            <div class="p-card-content">
+              <div class="col flex align-items-center justify-content-center">
+                  <app-message-form [session]="session"></app-message-form>
+              </div>
+            </div>
+          </ng-template>
+          
+        </p-card>
+        <p-card header="Message History ({{messageCount}})" [style]="{ height: '500px' }" styleClass="mb-7">
+          <div class="p-card-content">
+              <div class="col flex align-items-center justify-content-center">
+                  <app-message-list [sessionId]="session?.session_id" [messages]="messages"></app-message-list>
+              </div>
+            </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />

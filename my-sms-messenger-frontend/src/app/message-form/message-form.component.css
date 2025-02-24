@@ -1,0 +1,33 @@
+p-card {
+    height: 500px;
+    width: 700px;
+    padding: 10px;
+}
+
+
+.form-group {
+    display: grid;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.char-count {
+    display:flex;
+    justify-content: right;
+    font-size: small;
+    margin-right: 10px;
+}
+
+.button-group a {
+    margin-right: auto;
+}

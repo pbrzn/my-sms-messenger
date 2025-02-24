@@ -1,0 +1,15 @@
+div.row {
+    display: flex;
+    justify-content: center;
+}
+
+p-card {
+    width: 700px;
+    padding: 10px;
+    margin: 10px;
+    
+    .p-card-title {
+        display: flex;
+        justify-content: center;
+    }
+}
