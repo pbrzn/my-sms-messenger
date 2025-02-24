@@ -31,9 +31,6 @@ export class MessageListComponent implements OnInit {
     if (this.sessionId) {
       this.messageService.getAllMessages(this.sessionId).subscribe((messages: Message[]) => {
         this.messages = messages;
-        this.messages.forEach(message => {
-          console.log('Message:', message.body, message.from);
-        });
       });
     }
   }
