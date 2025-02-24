@@ -48,7 +48,6 @@ export class MessageFormComponent implements OnInit, OnChanges {
   onSubmit() {
     if (this.messageForm.valid) {
       this.message = this.messageForm.value;
-      console.log(this.message);
       this.messageService.sendMessage(this.message).pipe(
         switchMap(() => {
           this.messageCommunicationService.notifyMessageSubmitted();
@@ -66,7 +65,6 @@ export class MessageFormComponent implements OnInit, OnChanges {
     }
 
     if (this.message.body && this.message.from) {
-      console.log('Message:', this.message.body, this.message.from);
       this.clearForm();
     }
   }
