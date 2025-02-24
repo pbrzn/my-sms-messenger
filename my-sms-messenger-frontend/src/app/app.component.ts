@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.sessionService.createSession().subscribe(data => {
       this.session = data;
-      console.log(this.session);
       this.messageService.getAllMessages(this.session.session_id).subscribe(data => {
         if (data) {
           this.messages = data;
